@@ -94,18 +94,18 @@
         	                    document.ConfirmForm.ShipLName.value = data.payer.payer_info.last_name.toUpperCase();
         	                    document.ConfirmForm.ShipAddress1.value = shipping.line1.toUpperCase();
         	                    document.ConfirmForm.ShipAddress2.value = shipping.line2.toUpperCase();
-        	                   	document.ConfirmForm.ShipCity.value = shipping.city.toUpperCase();
-        	                   	document.ConfirmForm.ShipState.value = shipping.state.toUpperCase();
-        	                   	document.ConfirmForm.ShipZip.value = shipping.postal_code;
-        	                   	document.ConfirmForm.ShipCountry.value = shipping.country_code;
-        	                   	document.ConfirmForm.BillEmailAddress.value = data.payer.payer_info.email.toUpperCase();
-        	                   	document.ConfirmForm.ShipDayPhone.value = data.payer.payer_info.phone;
-        	                   	document.ConfirmForm.CardType.value = "PAYPAL";
-        	                   	document.ConfirmForm.CardID.value = "";
-        	                   	document.ConfirmForm.CardNumber.value = data.id;											// PayPal transaction ID
-        	                   	document.ConfirmForm.CardExpMonth.value = "";
-        	                   	document.ConfirmForm.CardExpYear.value = "";
-        	                   	document.ConfirmForm.PaypalInfo.value = data.id + "\\" + data.payer.payer_info.payer_id;	// PayPal transaction ID and Paypal customerID concatenated to save in db
+        	                    document.ConfirmForm.ShipCity.value = shipping.city.toUpperCase();
+        	                    document.ConfirmForm.ShipState.value = shipping.state.toUpperCase();
+        	                    document.ConfirmForm.ShipZip.value = shipping.postal_code;
+        	                    document.ConfirmForm.ShipCountry.value = shipping.country_code;
+        	                    document.ConfirmForm.BillEmailAddress.value = data.payer.payer_info.email.toUpperCase();
+        	                    document.ConfirmForm.ShipDayPhone.value = data.payer.payer_info.phone;
+        	                    document.ConfirmForm.CardType.value = "PAYPAL";
+        	                    document.ConfirmForm.CardID.value = "";
+        	                    document.ConfirmForm.CardNumber.value = data.id;											// PayPal transaction ID
+        	                    document.ConfirmForm.CardExpMonth.value = "";
+        	                    document.ConfirmForm.CardExpYear.value = "";
+        	                    document.ConfirmForm.PaypalInfo.value = data.id + "\\" + data.payer.payer_info.payer_id;	// PayPal transaction ID and Paypal customerID concatenated to save in db
         	                   	
     	                        // Execute the payment
     	                        return actions.payment.execute().then(function() {
